@@ -20,7 +20,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 620005645567.dkr.ecr.us-east-1.amazonaws.com/carrier-staging-repo:latest
+      - docker push 639993312576.dkr.ecr.us-east-2.amazonaws.com/python-code:latest
       - echo Writing image definitions file...
       - printf '[{"name":"python-code","imageUri":"%s"}]' 639993312576.dkr.ecr.us-east-2.amazonaws.com/python-code:latest > imagedefinitions.json
       - cat imagedefinitions.json 
