@@ -20,7 +20,7 @@ post_build:
       - echo Pushing the Docker images...
       - docker push  639993312576.dkr.ecr.us-east-2.amazonaws.com/python-code:latest
       - echo Writing image definitions file
-      - printf '[{"name":"python-code","imageUri":"%s"}]'  $639993312576.dkr.ecr.us-east-2.amazonaws.com/python-code:latest > imagedefinitions.json
+      - printf '[{"name":"python-code","imageUri":"%s"}]' $639993312576.dkr.ecr.us-east-2.amazonaws.com/python-code:latest > imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
